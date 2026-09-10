@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疾风之刃剑魔加点-剑魔技能加点方案与玩法攻略</title>
+    <meta name="description" content="疾风之刃剑魔加点攻略，提供剑魔职业的PVE与PVP加点方案、技能搭配推荐、连招思路及常见问题解答，助你快速掌握剑魔玩法。">
+    <meta name="keywords" content="疾风之刃剑魔加点,疾风之刃剑魔,剑魔加点,剑魔技能加点,疾风之刃攻略,剑魔连招">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 0;
+            border-bottom: 3px solid #e94560;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo h1 span {
+            color: #e94560;
+        }
+        .logo p {
+            color: #a0a4b8;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        /* Navigation */
+        .main-nav {
+            background: #16213e;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .main-nav ul li a {
+            color: #c0c5d0;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            background: #e94560;
+            color: #fff;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .hero-tags span {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        /* Section Styling */
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #e94560;
+            display: inline-block;
+        }
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .content-section {
+            margin-bottom: 50px;
+        }
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #e94560;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .card h3 {
+            color: #1a1a2e;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .card h3 i {
+            color: #e94560;
+            margin-right: 8px;
+            font-style: normal;
+        }
+        .card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        /* Skill Table */
+        .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
+        .skill-table th {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .skill-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+        .skill-table tr:last-child td {
+            border-bottom: none;
+        }
+        .skill-table tr:hover td {
+            background: #f8f9fa;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 2px;
+        }
+        .tag-pve {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        .tag-pvp {
+            background: #fce4ec;
+            color: #c62828;
+        }
+        .tag-essential {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        /* FAQ */
+        .faq-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .faq-item h4 {
+            color: #1a1a2e;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .faq-item h4::before {
+            content: "Q: ";
+            color: #e94560;
+            font-weight: 700;
+        }
+        .faq-item p {
+            color: #555;
+            padding-left: 30px;
+            position: relative;
+        }
+        .faq-item p::before {
+            content: "A: ";
+            color: #28a745;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+        }
+        /* Callout Box */
+        .callout {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            font-size: 15px;
+        }
+        .callout strong {
+            color: #856404;
+        }
+        /* Tips Box */
+        .tips-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+        .tips-box strong {
+            color: #0c5460;
+        }
+        /* Two Column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        .info-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .info-box h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #e94560;
+            padding-bottom: 10px;
+        }
+        .info-box ul {
+            padding-left: 20px;
+        }
+        .info-box ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        /* Footer */
+        .site-footer {
+            background: #1a1a2e;
+            color: #a0a4b8;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col ul li a {
+            color: #a0a4b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-col ul li a:hover {
+            color: #e94560;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a4a;
+            font-size: 14px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .main-nav ul {
+                justify-content: center;
+            }
+            .skill-table {
+                font-size: 14px;
+            }
+            .skill-table th, .skill-table td {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0;
+            }
+            .hero h2 {
+                font-size: 24px;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>疾风之刃<span>剑魔加点</span></h1>
+            <p>专注剑魔职业加点与玩法研究</p>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="container">
+        <ul>
+            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#pve">PVE加点</a></li>
+            <li><a href="#pvp">PVP加点</a></li>
+            <li><a href="#skills">核心技能</a></li>
+            <li><a href="#combo">连招思路</a></li>
+            <li><a href="#faq">常见问题</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h2>疾风之刃剑魔加点全攻略</h2>
+        <p>剑魔作为高爆发、高机动性的近战职业，合理的加点方案是发挥其战斗力的关键。无论你是刚接触剑魔的新手，还是追求极致输出的老玩家，这里都能找到适合你的加点思路与实战技巧。</p>
+        <div class="hero-tags">
+            <span>PVE刷图</span>
+            <span>PVP竞技</span>
+            <span>技能搭配</span>
+            <span>连招教学</span>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <!-- 加点方案选择 -->
+    <section class="content-section" id="overview">
+        <h2 class="section-title">剑魔加点核心思路</h2>
+        <p class="section-subtitle">了解剑魔的职业技能架构，选择最适合你的加点路线</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3><i>⚔️</i> PVE刷图加点</h3>
+                <p>以范围伤害与清怪效率为核心，优先强化大范围攻击技能与续航能力。推荐主加"魔刃风暴"与"暗影斩击"，配合被动技能提升持续作战能力，适合日常副本与团队副本。</p>
+            </div>
+            <div class="card">
+                <h3><i>🛡️</i> PVP竞技加点</h3>
+                <p>注重控制与爆发连招，强化突进技能和破防技能。推荐主加"瞬影突袭"与"魔狱锁链"，提升单挑能力与技能衔接流畅度，在竞技场中打出高额爆发。</p>
+            </div>
+            <div class="card">
+                <h3><i>📊</i> 综合平衡加点</h3>
+                <p>兼顾PVE与PVP的通用方案，均衡分配技能点，副本与竞技场均有不错表现。适合资源有限或不定向发展的玩家，推荐作为过渡期方案。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PVE加点方案 -->
+    <section class="content-section" id="pve">
+        <h2 class="section-title">PVE加点推荐方案</h2>
+        <p class="section-subtitle">基于当前版本的主流副本环境整理，技能等级为推荐满级参考</p>
+        
+        <div class="callout">
+            <strong>加点原则：</strong> PVE环境下优先保证清怪速度与技能循环流畅度，核心输出技能优先点满，位移技能视个人操作习惯取舍。
+        </div>
+
+        <table class="skill-table">
+            <thead>
+                <tr>
+                    <th>技能名称</th>
+                    <th>推荐等级</th>
+                    <th>优先级</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>魔刃风暴</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-essential">核心</span><span class="tag tag-pve">PVE</span></td>
+                    <td>范围大、伤害高，清怪效率出色，必满技能</td>
+                </tr>
+                <tr>
+                    <td>暗影斩击</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-essential">核心</span><span class="tag tag-pve">PVE</span></td>
+                    <td>单体爆发强，冷却较短，BOSS战主要输出手段</td>
+                </tr>
+                <tr>
+                    <td>魔狱斩</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-pve">PVE</span></td>
+                    <td>附带击退效果，适合清理精英怪与打断技能</td>
+                </tr>
+                <tr>
+                    <td>疾影突袭</td>
+                    <td>1级</td>
+                    <td><span class="tag tag-pve">PVE</span></td>
+                    <td>主要用于位移和追击，前期1级即可，后期点满提升机动性</td>
+                </tr>
+                <tr>
+                    <td>被动技能</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-essential">核心</span></td>
+                    <td>所有增加攻击力与暴击率的被动技能优先点满</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tips-box">
+            <strong>PVE推荐技能组合：</strong> 魔刃风暴 + 暗影斩击 + 魔狱斩 + 疾影突袭 + 怒气爆发。这套组合兼顾范围清怪与单体输出，技能冷却衔接顺畅，适合大多数副本场景。
+        </div>
+    </section>
+
+    <!-- PVP加点方案 -->
+    <section class="content-section" id="pvp">
+        <h2 class="section-title">PVP加点推荐方案</h2>
+        <p class="section-subtitle">竞技场与战场环境下的加点策略，强调控制与爆发</p>
+
+        <table class="skill-table">
+            <thead>
+                <tr>
+                    <th>技能名称</th>
+                    <th>推荐等级</th>
+                    <th>优先级</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>瞬影突袭</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-essential">核心</span><span class="tag tag-pvp">PVP</span></td>
+                    <td>高速突进并造成硬直，PVP起手核心技能</td>
+                </tr>
+                <tr>
+                    <td>魔狱锁链</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-essential">核心</span><span class="tag tag-pvp">PVP</span></td>
+                    <td>远程控制技能，命中后拉近敌人，配合连招使用</td>
+                </tr>
+                <tr>
+                    <td>暗影斩击</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-pvp">PVP</span></td>
+                    <td>高爆发伤害，作为连招终结技使用</td>
+                </tr>
+                <tr>
+                    <td>破甲击</td>
+                    <td>满级</td>
+                    <td><span class="tag tag-pvp">PVP</span></td>
+                    <td>降低敌人防御，提升后续伤害输出</td>
+                </tr>
+                <tr>
+                    <td>格挡反击</td>
+                    <td>1级或满级</td>
+                    <td><span class="tag tag-pvp">PVP</span></td>
+                    <td>根据个人反应能力决定，熟练玩家可点满增强反打能力</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tips-box">
+            <strong>PVP推荐连招：</strong> 瞬影突袭起手 → 接魔狱锁链控制 → 破甲击降低防御 → 暗影斩击爆发输出。这套连招可以在短时间内打出可观伤害，并利用控制效果占据先手优势。
+        </div>
+    </section>
+
+    <!-- 核心技能解析 -->
+    <section class="content-section" id="skills">
+        <h2 class="section-title">核心技能深度解析</h2>
+        <p class="section-subtitle">深入理解剑魔关键技能的特性与加点价值</p>
+
+        <div class="two-col">
+            <div class="info-box">
+                <h3>魔刃风暴</h3>
+                <p>剑魔最具代表性的范围攻击技能，以自身为中心释放旋转剑气，对周围敌人造成多段伤害。该技能拥有较大的攻击范围和稳定的伤害输出，是PVE清怪的核心技能。</p>
+                <br>
+                <p><strong>加点建议：</strong> 必满。每级提升约3%的伤害，满级后范围与伤害均有显著提升，性价比极高。</p>
+            </div>
+            <div class="info-box">
+                <h3>暗影斩击</h3>
+                <p>剑魔单体伤害最高的技能之一，出招速度快，附带短暂的无敌帧效果。在PVE中用于对首领级怪物输出，在PVP中则是重要的爆发终结技能。</p>
+                <br>
+                <p><strong>加点建议：</strong> 必满。作为主要输出技能，等级收益明显，且技能冷却时间较短，可频繁使用。</p>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="info-box">
+                <h3>瞬影突袭</h3>
+                <p>高速位移技能，向指定方向快速冲刺并对路径上的敌人造成伤害。具备优秀的机动性能，无论是追击还是逃脱都非常实用，是PVP中不可缺少的起手技能。</p>
+                <br>
+                <p><strong>加点建议：</strong> PVP玩家建议满级，缩短冷却时间并提高突进距离；PVE玩家可先点1级用于位移。</p>
+            </div>
+            <div class="info-box">
+                <h3>魔狱锁链</h3>
+                <p>远程控制技能，向前方投掷锁链，命中后会将敌人拉向自己并造成短时间硬直。该技能为剑魔提供了宝贵的远程控制手段，是PVP连招的桥梁。</p>
+                <br>
+                <p><strong>加点建议：</strong> PVP玩家建议满级，延长控制时间并提高命中率；PVE中可选点。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 连招思路 -->
+    <section class="content-section" id="combo">
+        <h2 class="section-title">实战连招思路与技巧</h2>
+        <p class="section-subtitle">掌握核心连招，让你的剑魔在战斗中游刃有余</p>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3><i>🔥</i> PVE连招循环</h3>
+                <p><strong>起手：</strong> 疾影突袭接近 → <strong>衔接：</strong> 魔刃风暴清理周围 → <strong>输出：</strong> 暗影斩击+魔狱斩交替 → <strong>收尾：</strong> 怒气爆发补充伤害。</p>
+                <br>
+                <p>这套循环以魔刃风暴为核心，利用暗影斩击与魔狱斩的短冷却特性保持持续输出，适合长时间作战。</p>
+            </div>
+            <div class="card">
+                <h3><i>⚡</i> PVP爆发连招</h3>
+                <p><strong>起手：</strong> 瞬影突袭突进 → <strong>控制：</strong> 魔狱锁链拉回 → <strong>破防：</strong> 破甲击降低防御 → <strong>爆发：</strong> 暗影斩击+魔刃风暴 → <strong>撤退：</strong> 疾影突袭脱离。</p>
+                <br>
+                <p>关键在于控制技能的命中率，若魔狱锁链未命中，应迅速利用位移技能撤退，等待下一轮技能CD。</p>
+            </div>
+            <div class="card">
+                <h3><i>🎯</i> 进阶技巧</h3>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>利用暗影斩击的无敌帧躲避关键技能</li>
+                    <li>魔刃风暴可在被包围时用于解围</li>
+                    <li>瞬影突袭可以穿越部分地形障碍</li>
+                    <li>合理使用格挡反击可以在PVP中反败为胜</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="content-section" id="faq">
+        <h2 class="section-title">剑魔加点常见问题</h2>
+        <p class="section-subtitle">整理玩家反馈最多的问题，帮助你少走弯路</p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4>剑魔加点可以重置吗？</h4>
+                <p>可以的。游戏中提供了技能重置功能，通常可以通过消耗特定道具或在特定NPC处进行重置。建议在尝试不同加点方案前先确认当前版本的重置方式与消耗。</p>
+            </div>
+            <div class="faq-item">
+                <h4>新手前期加点有什么注意事项？</h4>
+                <p>新手前期技能点有限，建议优先点满核心输出技能（如魔刃风暴、暗影斩击），被动技能中的攻击力提升也值得优先投入。非核心的位移或控制技能前期点1级即可，待后期技能点充裕后再补满。</p>
+            </div>
+            <div class="faq-item">
+                <h4>剑魔的被动技能哪些值得优先加满？</h4>
+                <p>增加攻击力、暴击率、暴击伤害的被动技能优先度最高。其次是增加技能伤害或减少技能冷却的被动。具体名称可能因版本不同有所差异，建议查看技能描述中的属性加成效果来判断。</p>
+            </div>
+            <div class="faq-item">
+                <h4>PVE和PVP加点方案可以通用吗？</h4>
+                <p>不建议完全通用。PVE加点侧重于范围伤害与续航，PVP加点更看重控制与爆发。如果条件允许，建议准备两套加点方案，分别应对不同的玩法需求。若资源有限，前期可使用平衡加点过渡。</p>
+            </div>
+            <div class="faq-item">
+                <h4>剑魔适合新手玩家吗？</h4>
+                <p>剑魔属于高机动性近战职业，操作有一定门槛但上限很高。新手玩家可以先从PVE加点开始熟悉技能机制，逐步掌握连招节奏后再尝试PVP玩法。合理加点可以让上手过程更加顺畅。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站介绍</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">友情链接</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>攻略导航</h4>
+                <ul>
+                    <li><a href="#pve">PVE加点方案</a></li>
+                    <li><a href="#pvp">PVP加点方案</a></li>
+                    <li><a href="#skills">核心技能解析</a></li>
+                    <li><a href="#combo">连招思路</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>免责声明</h4>
+                <p style="font-size: 14px;">本站内容仅供玩家交流参考，游戏版本更新可能导致技能调整，请以游戏内实际效果为准。</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 疾风之刃剑魔加点攻略站 All Rights Reserved. 本网站与游戏官方无隶属关系。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
