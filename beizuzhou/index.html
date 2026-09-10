@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>被诅咒的王子-漫画剧情解析与角色关系深度解读</title>
+    <meta name="description" content="被诅咒的王子漫画深度解析，了解王子诅咒的起源、剧情走向、主要角色关系、世界观设定以及读者常见问题，带你全面认识这部奇幻爱情作品。">
+    <meta name="keywords" content="被诅咒的王子,王子诅咒,漫画剧情,角色关系,奇幻漫画,诅咒解除,漫画解读">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background: #0d0b1a;
+            color: #e8e6f0;
+            line-height: 1.7;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部 */
+        .site-header {
+            background: linear-gradient(135deg, #1a1530 0%, #2a1f3d 50%, #181126 100%);
+            padding: 18px 0;
+            border-bottom: 1px solid #3a2f55;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(circle at 30% 30%, #b08fff, #5f3fa3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+            box-shadow: 0 0 18px rgba(150, 100, 255, 0.5);
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #c9a8ff, #ffb8d9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: #c9c0e0;
+            font-size: 0.95rem;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+        .main-nav a:hover {
+            color: #e6d5ff;
+            border-bottom-color: #9a7bcf;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #241d3a;
+            border-radius: 30px;
+            padding: 5px 5px 5px 18px;
+            border: 1px solid #3d3160;
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ddd;
+            width: 160px;
+            font-size: 0.9rem;
+        }
+        .search-box button {
+            background: #6a4eaa;
+            border: none;
+            color: #fff;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .search-box button:hover {
+            background: #8264c4;
+        }
+        /* 主视觉 */
+        .hero {
+            background: radial-gradient(ellipse at 20% 20%, #2f2350 0%, #141021 100%);
+            padding: 70px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(120, 70, 200, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-text {
+            flex: 1 1 360px;
+        }
+        .hero-text h1 {
+            font-size: 2.6rem;
+            line-height: 1.25;
+            margin-bottom: 18px;
+            background: linear-gradient(120deg, #efdbff, #c9a8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+        .hero-text p {
+            color: #b9accf;
+            font-size: 1.05rem;
+            margin-bottom: 26px;
+            max-width: 520px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(120, 90, 200, 0.25);
+            border: 1px solid #5f4a8a;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #c9b5f0;
+            margin-bottom: 20px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #7a5cc2, #5a3d9a);
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(100, 70, 180, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(100, 70, 180, 0.45);
+        }
+        .btn-outline {
+            border: 1px solid #7a5cc2;
+            padding: 11px 26px;
+            border-radius: 40px;
+            color: #c9b5f0;
+            transition: 0.3s;
+        }
+        .btn-outline:hover {
+            background: rgba(122, 92, 194, 0.15);
+        }
+        .hero-cover {
+            flex: 0 0 280px;
+            text-align: center;
+        }
+        .cover-frame {
+            width: 260px;
+            height: 350px;
+            background: linear-gradient(145deg, #2a2140, #1a142b);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px #4a3a70;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cover-frame::before {
+            content: "♛";
+            font-size: 80px;
+            opacity: 0.15;
+            position: absolute;
+            top: 30px;
+        }
+        .cover-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 6px;
+            background: linear-gradient(180deg, #e2d0ff, #9d7fd0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 60px;
+        }
+        .cover-sub {
+            color: #8b7aa8;
+            font-size: 0.9rem;
+            margin-top: 12px;
+            letter-spacing: 3px;
+        }
+        .cover-line {
+            width: 60%;
+            height: 1px;
+            background: #4e3f70;
+            margin: 20px auto;
+        }
+        .cover-tag {
+            font-size: 0.75rem;
+            color: #a28bc2;
+            background: #251e38;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #3f3358;
+        }
+        /* 信息条 */
+        .quick-info {
+            background: #131021;
+            padding: 22px 0;
+            border-bottom: 1px solid #2b2340;
+        }
+        .quick-info .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        .info-item span {
+            display: block;
+            color: #a28bc2;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+        .info-item strong {
+            font-size: 1.25rem;
+            color: #e0d2f5;
+            letter-spacing: 1px;
+        }
+        /* 通用区块 */
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+            color: #e0d2f5;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #7a5cc2, transparent);
+            border-radius: 3px;
+        }
+        .section-desc {
+            color: #988ab0;
+            margin-bottom: 36px;
+            max-width: 700px;
+        }
+        .bg-deep {
+            background: #0f0c1a;
+        }
+        /* 剧情卡片 */
+        .plot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .plot-card {
+            background: linear-gradient(145deg, #1c1630, #151021);
+            border-radius: 14px;
+            padding: 26px 24px;
+            border: 1px solid #2f2745;
+            transition: 0.3s;
+        }
+        .plot-card:hover {
+            border-color: #5f4a8a;
+            transform: translateY(-4px);
+        }
+        .plot-card .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .plot-card h3 {
+            color: #c9b5f0;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .plot-card p {
+            color: #a99cbe;
+            font-size: 0.95rem;
+        }
+        /* 角色 */
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px;
+            margin-top: 20px;
+        }
+        .char-item {
+            background: #171228;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2b2340;
+            transition: 0.3s;
+        }
+        .char-item:hover {
+            border-color: #6a4eaa;
+        }
+        .char-avatar {
+            height: 120px;
+            background: linear-gradient(135deg, #332a50, #221a38);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2rem;
+        }
+        .char-info {
+            padding: 20px;
+        }
+        .char-info h3 {
+            color: #e0d2f5;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .char-info .role {
+            color: #9a7bcf;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            background: rgba(122, 92, 194, 0.15);
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+        .char-info p {
+            color: #a197b5;
+            font-size: 0.9rem;
+        }
+        /* 世界观 */
+        .world-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .world-item {
+            background: #151021;
+            border-left: 4px solid #6a4eaa;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+        }
+        .world-item h3 {
+            color: #c9b5f0;
+            margin-bottom: 8px;
+        }
+        .world-item p {
+            color: #a197b5;
+            font-size: 0.95rem;
+        }
+        /* 热门话题 */
+        .topic-list {
+            display: grid;
+            gap: 14px;
+        }
+        .topic-item {
+            background: #171228;
+            border-radius: 10px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition: 0.3s;
+            border: 1px solid #2b2340;
+        }
+        .topic-item:hover {
+            background: #1d1730;
+            border-color: #4e3f70;
+        }
+        .topic-num {
+            background: #6a4eaa;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .topic-content {
+            flex: 1;
+        }
+        .topic-content h4 {
+            color: #d8c8ef;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+        .topic-content p {
+            color: #8f82a5;
+            font-size: 0.85rem;
+        }
+        .topic-tag {
+            color: #9a7bcf;
+            font-size: 0.8rem;
+            background: rgba(122, 92, 194, 0.1);
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        /* FAQ */
+        .faq-list {
+            display: grid;
+            gap: 14px;
+        }
+        .faq-item {
+            background: #161024;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid #2b2340;
+        }
+        .faq-item h4 {
+            color: #c9b5f0;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-item h4::before {
+            content: "Q";
+            background: #6a4eaa;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .faq-item p {
+            color: #a197b5;
+            padding-left: 34px;
+        }
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #241c3a, #181126);
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            color: #e0d2f5;
+            margin-bottom: 14px;
+        }
+        .cta-section p {
+            color: #a99cbe;
+            max-width: 600px;
+            margin: 0 auto 28px;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #0b0914;
+            padding: 36px 0;
+            border-top: 1px solid #241d38;
+            margin-top: 40px;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #7f7395;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .footer-links a:hover {
+            color: #b8a5d9;
+        }
+        .copyright {
+            color: #5e5470;
+            font-size: 0.85rem;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .main-nav ul {
+                gap: 16px;
+                margin-top: 8px;
+            }
+            .search-box {
+                width: 100%;
+                margin-top: 8px;
+            }
+            .search-box input {
+                flex: 1;
+                width: auto;
+            }
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .hero .container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .cover-frame {
+                width: 220px;
+                height: 300px;
+            }
+            .quick-info .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .topic-item {
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-nav ul {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">♛</div>
+                <div class="logo-text">诅咒王冠</div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#plot">剧情解析</a></li>
+                    <li><a href="#characters">角色关系</a></li>
+                    <li><a href="#world">世界观</a></li>
+                    <li><a href="#topics">热门讨论</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索剧情、角色...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 主视觉 -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <span class="hero-badge">✨ 奇幻 · 爱情 · 命运</span>
+                    <h1>被诅咒的王子</h1>
+                    <p>一部交织着古老诅咒与真挚情感的奇幻漫画。王子在命运的重压下，寻找解除诅咒的方法，也寻找着愿意接纳真实的自己之人。在这里，我们深入解读剧情脉络、角色内心与隐藏设定。</p>
+                    <div class="btn-group">
+                        <a href="#plot" class="btn-primary">开始探索剧情</a>
+                        <a href="#characters" class="btn-outline">查看主要角色</a>
+                    </div>
+                </div>
+                <div class="hero-cover">
+                    <div class="cover-frame">
+                        <div class="cover-title">被诅咒<br>的王子</div>
+                        <div class="cover-line"></div>
+                        <div class="cover-sub">CURSED PRINCE</div>
+                        <div style="margin-top: 20px;"><span class="cover-tag">奇幻虐恋</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快速信息 -->
+        <div class="quick-info">
+            <div class="container">
+                <div class="info-item">
+                    <span>作品类型</span>
+                    <strong>奇幻 · 爱情</strong>
+                </div>
+                <div class="info-item">
+                    <span>叙事视角</span>
+                    <strong>王子视角</strong>
+                </div>
+                <div class="info-item">
+                    <span>核心冲突</span>
+                    <strong>诅咒与救赎</strong>
+                </div>
+                <div class="info-item">
+                    <span>读者关注</span>
+                    <strong>角色命运 · 情感走向</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- 剧情简介 -->
+        <section class="section" id="plot">
+            <div class="container">
+                <h2 class="section-title">诅咒的起源与剧情脉络</h2>
+                <p class="section-desc">读者最关心的问题：王子为何被诅咒？诅咒带来什么影响？故事又将如何展开？我们从已知剧情中梳理出清晰线索。</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <div class="card-icon">🔮</div>
+                        <h3>诅咒的降临</h3>
+                        <p>故事开篇，年轻的王子在继承王位的仪式上被神秘力量笼罩。古老的预言说，王室的骄傲将引来灾祸。诅咒并非瞬间爆发，而是随着王子成长逐渐显现——他每到夜晚便会陷入无法解释的虚弱，甚至偶尔会失去意识。</p>
+                    </div>
+                    <div class="plot-card">
+                        <div class="card-icon">⚔️</div>
+                        <h3>寻找解除之法</h3>
+                        <p>为了不危及王国，王子隐瞒病情，暗中翻阅古籍、拜访隐士。传闻中，只有找到"愿意为王子付出一切的人"，诅咒才能被打破。但王子不愿利用他人感情，宁愿独自承受痛苦，这也成为故事的核心虐点。</p>
+                    </div>
+                    <div class="plot-card">
+                        <div class="card-icon">💔</div>
+                        <h3>情感纠葛</h3>
+                        <p>当一位来自邻国的少女以宫廷顾问的身份出现时，王子平静的生活被打破。她似乎知道诅咒的秘密，却迟迟不肯说出真相。两人在试探与信任中靠近，但诅咒的阴影始终横亘其间。</p>
+                    </div>
+                    <div class="plot-card">
+                        <div class="card-icon">🌒</div>
+                        <h3>月圆之变</h3>
+                        <p>每个满月之夜，诅咒的力量达到顶峰。王子会在月下变成某种非人的形态——这也是他最大的恐惧。他害怕被人看到真实的自己，更害怕伤害到身边在乎的人。</p>
+                    </div>
+                    <div class="plot-card">
+                        <div class="card-icon">📜</div>
+                        <h3>王室秘辛</h3>
+                        <p>随着剧情推进，读者会发现诅咒与王室的过去紧密相连。多年前一场未公开的背叛，或许是诅咒的真正源头。王子的身世背后，还隐藏着更惊人的秘密。</p>
+                    </div>
+                    <div class="plot-card">
+                        <div class="card-icon">🕊️</div>
+                        <h3>希望的微光</h3>
+                        <p>尽管身处黑暗，故事依然传递着温暖。王子身边的骑士、女仆甚至敌国的使者，都在不经意间给予他支持。这些细微的善意，可能正是解除诅咒的关键。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要角色 -->
+        <section class="section bg-deep" id="characters">
+            <div class="container">
+                <h2 class="section-title">主要角色关系图谱</h2>
+                <p class="section-desc">理解角色之间的情感羁绊，是读懂《被诅咒的王子》的关键。以下整理了核心人物及其关系动态。</p>
+                <div class="characters-grid">
+                    <div class="char-item">
+                        <div class="char-avatar">👑</div>
+                        <div class="char-info">
+                            <h3>艾德里克王子</h3>
+                            <span class="role">主角 · 被诅咒者</span>
+                            <p>表面坚强、内心温柔的王子。他背负着诅咒的沉重秘密，不愿连累他人，却也无法完全封闭自己的心。在孤独与渴望被理解之间不断挣扎。</p>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">🌙</div>
+                        <div class="char-info">
+                            <h3>莉亚娜</h3>
+                            <span class="role">女主角 · 神秘顾问</span>
+                            <p>来自遥远国度的宫廷顾问，博学而冷静。她知晓诅咒的真相，却因某种约定不能直接透露。她与王子之间有一种微妙的默契，也有未解的心结。</p>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">⚔️</div>
+                        <div class="char-info">
+                            <h3>雷恩骑士</h3>
+                            <span class="role">王子的挚友</span>
+                            <p>从小陪伴王子长大的护卫骑士。他隐约察觉王子的异常，却选择默默守护。忠诚与友情是他信守的准则，也是王子最信任的依靠。</p>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-avatar">🏰</div>
+                        <div class="char-info">
+                            <h3>老国王</h3>
+                            <span class="role">王子的父亲</span>
+                            <p>威严而沉默的统治者。他似乎对诅咒有所了解，却始终回避与王子谈论此事。他严厉的外表下，是否隐藏着难言的苦衷？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 世界观设定 -->
+        <section class="section" id="world">
+            <div class="container">
+                <h2 class="section-title">世界观与设定解析</h2>
+                <p class="section-desc">要深入理解故事，就不能忽略这个充满魔法与政治博弈的奇幻世界。</p>
+                <div class="world-grid">
+                    <div class="world-item">
+                        <h3>王国与势力</h3>
+                        <p>故事发生在虚构的奥兰迪亚王国，周边有数个邻国。王室拥有古老的魔法血脉，但血脉的力量正逐渐衰竭，这也是诅咒得以滋生的土壤。</p>
+                    </div>
+                    <div class="world-item">
+                        <h3>魔法体系</h3>
+                        <p>本作中的魔法并非万能。它需要媒介与代价，诅咒更是被视为"禁忌之术"。使用禁忌魔法的人，会被世界本身所排斥。</p>
+                    </div>
+                    <div class="world-item">
+                        <h3>月亮的象征</h3>
+                        <p>月亮在故事中反复出现，既是诅咒的触发条件，也暗喻着王子无法掌控的命运。满月时的变身形态，被认为是王子内心阴影的具象化。</p>
+                    </div>
+                    <div class="world-item">
+                        <h3>阶级与偏见</h3>
+                        <p>王国内部贵族与平民之间存在隔阂。王子在微服出行时体会到底层人民的生活，这段经历影响了他对解除诅咒方式的思考。</p>
+                    </div>
+                    <div class="world-item">
+                        <h3>古老预言</h3>
+                        <p>"当王冠染上血色，真正的继承者将在月光下觉醒。" 这句预言贯穿始终。它究竟指代什么？是诅咒的警示，还是救赎的指引？</p>
+                    </div>
+                    <div class="world-item">
+                        <h3>隐藏线索</h3>
+                        <p>细心的读者会发现，每章扉页都藏有一枚特殊符号。这些符号似乎与诅咒的解法有关，也是作者埋下的重要伏笔。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门话题 -->
+        <section class="section bg-deep" id="topics">
+            <div class="container">
+                <h2 class="section-title">读者热门讨论</h2>
+                <p class="section-desc">来自读者社区的真实热议话题，或许也正是你心中的疑问。</p>
+                <div class="topic-list">
+                    <div class="topic-item">
+                        <div class="topic-num">1</div>
+                        <div class="topic-content">
+                            <h4>王子最后能否真正摆脱诅咒？</h4>
+                            <p>从目前剧情来看，诅咒的解法似乎不只一种。但无论结局如何，王子都已经在过程中获得了比自由更珍贵的东西。</p>
+                        </div>
+                        <span class="topic-tag">剧情预测</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-num">2</div>
+                        <div class="topic-content">
+                            <h4>莉亚娜的真实身份是什么？</h4>
+                            <p>她为何知道诅咒的解法？又为何隐瞒？读者推测她可能与当年那场王室秘密有关，甚至就是预言之中的关键人物。</p>
+                        </div>
+                        <span class="topic-tag">角色分析</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-num">3</div>
+                        <div class="topic-content">
+                            <h4>诅咒是惩罚还是考验？</h4>
+                            <p>有观点认为，诅咒并非单纯的厄运，而是世界给予王子的一次成长试炼。只有理解责任与爱的意义，才能打破枷锁。</p>
+                        </div>
+                        <span class="topic-tag">主题探讨</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-num">4</div>
+                        <div class="topic-content">
+                            <h4>骑士雷恩是否也喜欢王子？</h4>
+                            <p>雷恩的忠诚超越了普通主仆关系。他默默守护的举动让不少读者感动，也让这条感情线变得扑朔迷离。</p>
+                        </div>
+                        <span class="topic-tag">CP讨论</span>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-num">5</div>
+                        <div class="topic-content">
+                            <h4>月圆变身是否意味着王子会伤害他人？</h4>
+                            <p>王子最担心的事情，就是失控伤害到周围的人。但根据目前剧情，他在变身时似乎仍保留着一丝理智，这或许与他的善良本性有关。</p>
+                        </div>
+                        <span class="topic-tag">设定疑问</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">针对新读者最常提出的疑惑，我们整理了一份简明解答。</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4>《被诅咒的王子》是什么类型的漫画？</h4>
+                        <p>这是一部以奇幻为背景、以情感为核心的叙事型漫画。它融合了王室斗争、魔法诅咒、身份秘密与细腻的情感发展，适合喜欢深度剧情和角色塑造的读者。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>故事的整体基调是甜还是虐？</h4>
+                        <p>整体偏向"先虐后暖"的叙事节奏。前期有较多压抑与误解的情节，但随着角色关系深入，会有大量温暖治愈的互动。虐中带糖，糖中带刀，是读者常用的评价。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>诅咒有没有可能被彻底解除？</h4>
+                        <p>根据目前剧情走向，诅咒确实存在解除的可能性，但需要付出相应代价。作者在访谈中也曾暗示，结局会出人意料但又在情理之中，建议关注细节伏笔。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>这部漫画适合什么类型的读者？</h4>
+                        <p>如果你喜欢带有奇幻设定的情感故事，或是偏爱王子、魔法、宿命等元素，那么这部作品会很对你的胃口。它也适合喜欢分析伏笔和角色动机的深度阅读者。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>目前更新到什么进度了？</h4>
+                        <p>漫画连载仍在进行中，主线剧情已进入中后期阶段。王子与莉亚娜的关系有了突破性进展，关于诅咒真相的谜团也在逐步揭开。建议从第一话开始阅读，体验会更完整。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 阅读指引 -->
+        <section class="cta-section container">
+            <h2>准备好走进王子的命运了吗？</h2>
+            <p>从第一话开始，跟随艾德里克王子一起面对诅咒的考验。在充满魔法与阴谋的世界里，见证一段关于勇气、信任与救赎的故事。</p>
+            <div class="btn-group" style="justify-content: center;">
+                <a href="#" class="btn-primary">开始阅读漫画</a>
+                <a href="#characters" class="btn-outline">回顾角色信息</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="logo-area">
+                <div class="logo-icon" style="width:32px;height:32px;font-size:18px;">♛</div>
+                <span style="color:#8a7aa8;font-weight:600;">诅咒王冠 · 被诅咒的王子专题站</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">关于本站</a>
+                <a href="#">漫画目录</a>
+                <a href="#">角色百科</a>
+                <a href="#">讨论社区</a>
+            </div>
+            <div class="copyright">
+                © 2024 cursedprince.com 仅供爱好者交流
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+              </html>
